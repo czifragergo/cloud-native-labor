@@ -34,7 +34,7 @@ def redis_status(increment=False):
             socket_timeout=2,
         )
         client.ping()
-        count = client.incr("cloudlab_visits") if increment else client.get("cloudlab_visits")
+        count = client.incr("cloudlab_látogatás") if increment else client.get("cloudlab_visits")
         return {
             "configured": True,
             "connected": True,
